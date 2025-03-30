@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Arena History</title>
+    <style>
+        /* General font and body styling to reflect NYT */
+        body {
+            font-family: "Georgia", serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+        }
+
+        /* Style for the tabs container */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            background-color: #fff;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        /* Style for each individual tab */
+        .tab {
+            padding: 12px 20px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            color: #555;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+        }
+
+        /* Hover effect for tabs */
+        .tab:hover {
+            color: #000;
+            border-bottom: 2px solid #000;
+        }
+
+        /* Active tab styling */
+        .tab.active {
+            color: #000;
+            border-bottom: 2px solid #000;
+            font-weight: bold;
+        }
+
+        /* Style for the tab content */
+        .tab-content {
+            display: none;
+            padding: 30px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active-content {
+            display: block;
+        }
+
+        /* Spacing and padding for overall content */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: 40px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab(0)">Company History</div>
+            <div class="tab" onclick="showTab(1)">Model History</div>
+        </div>
+
+        <div id="tab1" class="tab-content active-content">
+          <div class="flourish-embed flourish-chart" data-src="visualisation/22378491"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22378491/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+          <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/22378969"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22378969/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabIndex) {
+            // Remove active class from all tabs and hide all content
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active-content'));
+
+            // Add active class to the clicked tab and show the corresponding content
+            tabs[tabIndex].classList.add('active');
+            contents[tabIndex].classList.add('active-content');
+        }
+    </script>
+
+</body>
+</html>

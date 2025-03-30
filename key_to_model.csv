@@ -1,0 +1,14 @@
+key,Model,License,Organization
+athene-70b,Athene-70B,CC-BY-NC-4.0,NexusFlow
+chatgpt-4o-latest-2024-08-08,ChatGPT-4o-latest (2024-08-08),Proprietary,OpenAI
+claude-2,Claude 2,Proprietary,Anthropic
+claude-instant-v1,Claude Instant v1,Proprietary,Anthropic
+claude-v1,Claude 1,Proprietary,Anthropic
+dbrx-instruct,DBRX-instruct,Apache-2.0,Databricks
+gemini-2.0-flash-lite-preview,Gemini-2.0-Flash-Lite-Preview,Proprietary,Google
+gpt-3.5-turbo,GPT 3.5 Turbo,Proprietary,OpenAI
+gpt-4,ChatGPT-4,Proprietary,OpenAI
+gpt-4-turbo,GPT 4 Turbo,Proprietary,OpenAI
+im-also-a-late-june-chatbot,Gemma 2 (also testing),Proprietary,Google
+late-june-chatbot,Gemma 2 (testing),Proprietary,Google
+qwen-max-2025-01-25,Qwen-Max-2025-01-25,Proprietary,Alibaba
