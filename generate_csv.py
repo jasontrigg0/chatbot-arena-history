@@ -5,11 +5,11 @@ import pickle
 if __name__ == "__main__":
     all_dfs = []
 
-    elo_result_files = glob.glob("elo_results_*.pkl")
-    elo_result_files.sort(key=lambda x: int(x[12:-4]))
+    elo_result_files = glob.glob("../chatbot-arena-leaderboard/elo_results_*.pkl")
+    elo_result_files.sort(key=lambda x: int(x[-12:-4]))
 
-    leaderboard_table_files = glob.glob("leaderboard_table_*.csv")
-    leaderboard_table_files.sort(key=lambda x: int(x[18:-4]))
+    leaderboard_table_files = glob.glob("../chatbot-arena-leaderboard/leaderboard_table_*.csv")
+    leaderboard_table_files.sort(key=lambda x: int(x[-12:-4]))
     latest_model_info = pd.read_csv(leaderboard_table_files[-1])[["key","Model","License","Organization"]]
     hard_coded_info = pd.read_csv("key_to_model.csv")
 
@@ -45,6 +45,4 @@ if __name__ == "__main__":
         all_dfs.append(output_df)
         
     alltime_results = pd.concat(all_dfs, ignore_index=True)
-    alltime_results.to_csv("/tmp/alltime.csv", ignore_index=True)
-
-    
+    alltime_results.to_csv("/tmp/alltime.csv", index=False)
